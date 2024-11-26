@@ -1,0 +1,104 @@
+@use '../base/variables' as v;
+
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0.4em 2em;
+  background-color: v.$azul;
+  border-radius: 25px;
+  transition: 0.4s ease-in-out;
+  max-width: 40rem;
+  width: 100%;
+
+  &:hover {
+    transform: scale(1.05);
+    border: 1px solid black;
+  }
+
+  &__heading {
+    text-align: center;
+    margin: 2em;
+    color: #fff;
+    font-size: 1.2em;
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px #050505;
+
+    &-icon {
+      height: 1.3em;
+      width: 1.3em;
+      fill: #fff;
+    }
+
+    &-input {
+      background: none;
+      border: none;
+      outline: none;
+      width: 100%;
+      color: #d3d3d3;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // Alinea verticalmente los botones
+    gap: 0.5em;
+    margin: 2.5em;
+    cursor: pointer;
+
+    &__button {
+      text-align: center;
+      padding: 0.5em;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      background-color: #252525;
+      color: #fff;
+      transition: 0.4s ease-in-out;
+      text-decoration: none;
+
+
+      &--login {
+        padding: 0.5em 1.1em;
+        cursor: pointer;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+
+      &--signup {
+        margin: 0;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+
+      &--forgot {
+        margin: 0;
+
+        &:hover {
+          background-color: red;
+        }
+      }
+    }
+  }
+}

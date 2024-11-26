@@ -1,0 +1,143 @@
+
+$pr-color-background: #f9f9f9;
+$pr-color-border: #ddd;
+$pr-color-focus: #007bff;
+$pr-color-hover: #0056b3;
+$pr-color-button: #28a745;
+$pr-color-button-hover: #218838;
+$pr-color-button-active: #1e7e34;
+$pr-color-text: #333;
+.profile {
+    .form-publication {
+        display: flex;
+        gap: 15px;
+
+        .form-publication__input {
+            display: flex;
+            flex-direction: column;
+            justify-content: end; gap: 1rem;
+        }
+    
+        // Campo de texto
+        .form-textarea {
+          width: 100%;
+          padding: 15px;
+          border: 1px solid $pr-color-border;
+          border-radius: 5px;
+          resize: none;
+          font-size: 14px;
+          font-family: Arial, sans-serif;
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+          &:focus {
+            border-color: $pr-color-focus;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+          }
+        }
+    
+        // Botón personalizado para agregar imágenes
+        .custom-file-label {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 10px 15px;
+          background-color: $pr-color-focus;
+          color: #fff;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 14px;
+          font-weight: 500;
+          transition: background-color 0.3s ease;
+          text-align: center;
+    
+          &:hover {
+            background-color: $pr-color-hover;
+          }
+    
+          .icon-upload {
+            fill: #fff;
+          }
+        }
+    
+        // Ocultar input de archivo original
+        .form-file-input {
+          display: none;
+        }
+    
+        // Botón de publicación
+        .form-button {
+          padding: 12px;
+          background-color: $pr-color-button;
+          color: white;
+          font-size: 16px;
+          font-weight: bold;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+    
+          &:hover {
+            background-color: $pr-color-button-hover;
+          }
+    
+          &:active {
+            background-color: $pr-color-button-active;
+          }
+        }
+    }
+
+    profile__header__images {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .profile__image__profile {
+        display: flex;
+        justify-content: center;
+        margin-top: -10rem;
+
+        img {
+            width: 20rem;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    .profile__image__cover {
+        display: flex;
+        flex-direction: column;
+        
+        img {
+            height: 30rem;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+    }
+
+    .profile__header__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 10rem;
+        background-color: gray;
+        max-width: 30rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        color: white;
+
+        .profile__header__info__name {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .profile__header__info__email {
+            font-size: 1.6rem;
+            text-align: center;
+        }
+    }
+}

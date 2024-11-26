@@ -1,0 +1,91 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.recommended-books {
+    margin: v.$espaciado 0;
+
+    h2 {
+        text-align: center;
+        font-size: 4rem;
+        margin: 15rem 0 5rem 0;
+    }
+
+    h3 {
+        font-size: 1rem;
+        max-height: 6rem;         /* Altura máxima de 5rem */
+        overflow: hidden;         /* Ocultar el texto que se sale del área */
+        display: -webkit-box;     /* Usar contenedor flexible en Safari */
+        line-clamp: 2;    /* Número máximo de líneas visibles */
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;  /* Agregar puntos suspensivos */
+        white-space: normal;      /* Permitir saltos de línea */
+        text-align: center;
+    }
+    
+
+    .book-card{
+        color: v.$gris;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+        h3{
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            width: 60%;
+            height: 30rem;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+.recommended-books__grid {
+    @include m.grid(4, 2rem);
+}
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+}
+
+.modal-content {
+    @include m.grid(2, 2rem);
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

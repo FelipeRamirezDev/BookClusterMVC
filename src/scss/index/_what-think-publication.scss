@@ -1,0 +1,104 @@
+// Variables de colores
+$wtp-color-background: #f9f9f9;
+$wtp-color-border: #ddd;
+$wtp-color-focus: #007bff;
+$wtp-color-hover: #0056b3;
+$wtp-color-button: #28a745;
+$wtp-color-button-hover: #218838;
+$wtp-color-button-active: #1e7e34;
+$wtp-color-text: #333;
+
+// Contenedor principal
+.que-piensas-publication {
+  background-color: $wtp-color-background;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $wtp-color-text;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  // Estilo del formulario
+  .form-publication {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    // Campo de texto
+    .form-textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid $wtp-color-border;
+      border-radius: 5px;
+      resize: none;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+
+      &:focus {
+        border-color: $wtp-color-focus;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+      }
+    }
+
+    // Botón personalizado para agregar imágenes
+    .custom-file-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 15px;
+      background-color: $wtp-color-focus;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+      text-align: center;
+
+      &:hover {
+        background-color: $wtp-color-hover;
+      }
+
+      .icon-upload {
+        fill: #fff;
+      }
+    }
+
+    // Ocultar input de archivo original
+    .form-file-input {
+      display: none;
+    }
+
+    // Botón de publicación
+    .form-button {
+      padding: 12px;
+      background-color: $wtp-color-button;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $wtp-color-button-hover;
+      }
+
+      &:active {
+        background-color: $wtp-color-button-active;
+      }
+    }
+  }
+}
